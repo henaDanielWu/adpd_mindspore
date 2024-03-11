@@ -1,0 +1,127 @@
+# 1.This file shows the parsed IR info when graph evaluating failed to help find the problem.
+# 2.You can search the last `------------------------>` to the node which is inferred failed.
+# 3.Refer to https://www.mindspore.cn/search?inputValue=analyze_fail.ir to get more instructions.
+# ===============================================================================
+
+subgraph attr:
+training : 0
+subgraph instance: models_pose_shufflenetv2_ShuffleNetV2_construct.1 : 0xd0d4d90
+# In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:370/    def construct(self, x):/
+subgraph @models_pose_shufflenetv2_ShuffleNetV2_construct.1(%para1_x, %para2_final_layer.weight, %para3_conv1.conv.weight, %para4_conv1.bn.gamma, %para5_conv1.bn.beta, %para6_conv1.bn.moving_mean, %para7_conv1.bn.moving_variance, %para8_0.0.branch1.3.conv.weight, %para9_0.0.branch1.3.bn.gamma, %para10_0.0.branch1.3.bn.beta, %para11_0.0.branch1.3.bn.moving_mean, %para12_0.0.branch1.3.bn.moving_variance, %para13_deconv_layers.0.weight, %para14_deconv_layers.3.weight, %para15_deconv_layers.6.weight, %para16_deconv_layers.1.gamma, %para17_deconv_layers.1.beta, %para18_deconv_layers.1.moving_mean, %para19_deconv_layers.1.moving_variance, %para20_deconv_layers.4.gamma, %para21_deconv_layers.4.beta, %para22_deconv_layers.4.moving_mean, %para23_deconv_layers.4.moving_variance, %para24_deconv_layers.7.gamma, %para25_deconv_layers.7.beta, %para26_deconv_layers.7.moving_mean, %para27_deconv_layers.7.moving_variance, %para28_0.0.branch1.0.conv.weight, %para29_0.0.branch1.1.conv.weight, %para30_0.0.branch2.0.conv.weight, %para31_0.0.branch2.1.conv.weight, %para32_0.0.branch2.2.conv.weight, %para33_0.1.branch2.0.conv.weight, %para34_0.1.branch2.1.conv.weight, %para35_0.1.branch2.2.conv.weight, %para36_0.2.branch2.0.conv.weight, %para37_0.2.branch2.1.conv.weight, %para38_0.2.branch2.2.conv.weight, %para39_0.3.branch2.0.conv.weight, %para40_0.3.branch2.1.conv.weight, %para41_0.3.branch2.2.conv.weight, %para42_0.0.branch1.1.0.branch1.0.conv.weight, %para43_0.0.branch1.1.0.branch1.1.conv.weight, %para44_0.0.branch1.1.0.branch2.0.conv.weight, %para45_0.0.branch1.1.0.branch2.1.conv.weight, %para46_0.0.branch1.1.0.branch2.2.conv.weight, %para47_0.0.branch1.1.1.branch2.0.conv.weight, %para48_0.0.branch1.1.1.branch2.1.conv.weight, %para49_0.0.branch1.1.1.branch2.2.conv.weight, %para50_0.0.branch1.1.2.branch2.0.conv.weight, %para51_0.0.branch1.1.2.branch2.1.conv.weight, %para52_0.0.branch1.1.2.branch2.2.conv.weight, %para53_0.0.branch1.1.3.branch2.0.conv.weight, %para54_0.0.branch1.1.3.branch2.1.conv.weight, %para55_0.0.branch1.1.3.branch2.2.conv.weight, %para56_0.0.branch1.1.4.branch2.0.conv.weight, %para57_0.0.branch1.1.4.branch2.1.conv.weight, %para58_0.0.branch1.1.4.branch2.2.conv.weight, %para59_0.0.branch1.1.5.branch2.0.conv.weight, %para60_0.0.branch1.1.5.branch2.1.conv.weight, %para61_0.0.branch1.1.5.branch2.2.conv.weight, %para62_0.0.branch1.1.6.branch2.0.conv.weight, %para63_0.0.branch1.1.6.branch2.1.conv.weight, %para64_0.0.branch1.1.6.branch2.2.conv.weight, %para65_0.0.branch1.1.7.branch2.0.conv.weight, %para66_0.0.branch1.1.7.branch2.1.conv.weight, %para67_0.0.branch1.1.7.branch2.2.conv.weight, %para68_0.0.branch1.2.0.branch1.0.conv.weight, %para69_0.0.branch1.2.0.branch1.1.conv.weight, %para70_0.0.branch1.2.0.branch2.0.conv.weight, %para71_0.0.branch1.2.0.branch2.1.conv.weight, %para72_0.0.branch1.2.0.branch2.2.conv.weight, %para73_0.0.branch1.2.1.branch2.0.conv.weight, %para74_0.0.branch1.2.1.branch2.1.conv.weight, %para75_0.0.branch1.2.1.branch2.2.conv.weight, %para76_0.0.branch1.2.2.branch2.0.conv.weight, %para77_0.0.branch1.2.2.branch2.1.conv.weight, %para78_0.0.branch1.2.2.branch2.2.conv.weight, %para79_0.0.branch1.2.3.branch2.0.conv.weight, %para80_0.0.branch1.2.3.branch2.1.conv.weight, %para81_0.0.branch1.2.3.branch2.2.conv.weight, %para82_0.0.branch1.0.bn.gamma, %para83_0.0.branch1.0.bn.beta, %para84_0.0.branch1.0.bn.moving_mean, %para85_0.0.branch1.0.bn.moving_variance, %para86_0.0.branch1.1.bn.gamma, %para87_0.0.branch1.1.bn.beta, %para88_0.0.branch1.1.bn.moving_mean, %para89_0.0.branch1.1.bn.moving_variance, %para90_0.0.branch2.0.bn.gamma, %para91_0.0.branch2.0.bn.beta, %para92_0.0.branch2.0.bn.moving_mean, %para93_0.0.branch2.0.bn.moving_variance, %para94_0.0.branch2.1.bn.gamma, %para95_0.0.branch2.1.bn.beta, %para96_0.0.branch2.1.bn.moving_mean, %para97_0.0.branch2.1.bn.moving_variance, %para98_0.0.branch2.2.bn.gamma, %para99_0.0.branch2.2.bn.beta, %para100_0.0.branch2.2.bn.moving_mean, %para101_0.0.branch2.2.bn.moving_variance, %para102_0.1.branch2.0.bn.gamma, %para103_0.1.branch2.0.bn.beta, %para104_0.1.branch2.0.bn.moving_mean, %para105_0.1.branch2.0.bn.moving_variance, %para106_0.1.branch2.1.bn.gamma, %para107_0.1.branch2.1.bn.beta, %para108_0.1.branch2.1.bn.moving_mean, %para109_0.1.branch2.1.bn.moving_variance, %para110_0.1.branch2.2.bn.gamma, %para111_0.1.branch2.2.bn.beta, %para112_0.1.branch2.2.bn.moving_mean, %para113_0.1.branch2.2.bn.moving_variance, %para114_0.2.branch2.0.bn.gamma, %para115_0.2.branch2.0.bn.beta, %para116_0.2.branch2.0.bn.moving_mean, %para117_0.2.branch2.0.bn.moving_variance, %para118_0.2.branch2.1.bn.gamma, %para119_0.2.branch2.1.bn.beta, %para120_0.2.branch2.1.bn.moving_mean, %para121_0.2.branch2.1.bn.moving_variance, %para122_0.2.branch2.2.bn.gamma, %para123_0.2.branch2.2.bn.beta, %para124_0.2.branch2.2.bn.moving_mean, %para125_0.2.branch2.2.bn.moving_variance, %para126_0.3.branch2.0.bn.gamma, %para127_0.3.branch2.0.bn.beta, %para128_0.3.branch2.0.bn.moving_mean, %para129_0.3.branch2.0.bn.moving_variance, %para130_0.3.branch2.1.bn.gamma, %para131_0.3.branch2.1.bn.beta, %para132_0.3.branch2.1.bn.moving_mean, %para133_0.3.branch2.1.bn.moving_variance, %para134_0.3.branch2.2.bn.gamma, %para135_0.3.branch2.2.bn.beta, %para136_0.3.branch2.2.bn.moving_mean, %para137_0.3.branch2.2.bn.moving_variance, %para138_0.0.branch1.1.0.branch1.0.bn.gamma, %para139_0.0.branch1.1.0.branch1.0.bn.beta, %para140_0.0.branch1.1.0.branch1.0.bn.moving_mean, %para141_0.0.branch1.1.0.branch1.0.bn.moving_variance, %para142_0.0.branch1.1.0.branch1.1.bn.gamma, %para143_0.0.branch1.1.0.branch1.1.bn.beta, %para144_0.0.branch1.1.0.branch1.1.bn.moving_mean, %para145_0.0.branch1.1.0.branch1.1.bn.moving_variance, %para146_0.0.branch1.1.0.branch2.0.bn.gamma, %para147_0.0.branch1.1.0.branch2.0.bn.beta, %para148_0.0.branch1.1.0.branch2.0.bn.moving_mean, %para149_0.0.branch1.1.0.branch2.0.bn.moving_variance, %para150_0.0.branch1.1.0.branch2.1.bn.gamma, %para151_0.0.branch1.1.0.branch2.1.bn.beta, %para152_0.0.branch1.1.0.branch2.1.bn.moving_mean, %para153_0.0.branch1.1.0.branch2.1.bn.moving_variance, %para154_0.0.branch1.1.0.branch2.2.bn.gamma, %para155_0.0.branch1.1.0.branch2.2.bn.beta, %para156_0.0.branch1.1.0.branch2.2.bn.moving_mean, %para157_0.0.branch1.1.0.branch2.2.bn.moving_variance, %para158_0.0.branch1.1.1.branch2.0.bn.gamma, %para159_0.0.branch1.1.1.branch2.0.bn.beta, %para160_0.0.branch1.1.1.branch2.0.bn.moving_mean, %para161_0.0.branch1.1.1.branch2.0.bn.moving_variance, %para162_0.0.branch1.1.1.branch2.1.bn.gamma, %para163_0.0.branch1.1.1.branch2.1.bn.beta, %para164_0.0.branch1.1.1.branch2.1.bn.moving_mean, %para165_0.0.branch1.1.1.branch2.1.bn.moving_variance, %para166_0.0.branch1.1.1.branch2.2.bn.gamma, %para167_0.0.branch1.1.1.branch2.2.bn.beta, %para168_0.0.branch1.1.1.branch2.2.bn.moving_mean, %para169_0.0.branch1.1.1.branch2.2.bn.moving_variance, %para170_0.0.branch1.1.2.branch2.0.bn.gamma, %para171_0.0.branch1.1.2.branch2.0.bn.beta, %para172_0.0.branch1.1.2.branch2.0.bn.moving_mean, %para173_0.0.branch1.1.2.branch2.0.bn.moving_variance, %para174_0.0.branch1.1.2.branch2.1.bn.gamma, %para175_0.0.branch1.1.2.branch2.1.bn.beta, %para176_0.0.branch1.1.2.branch2.1.bn.moving_mean, %para177_0.0.branch1.1.2.branch2.1.bn.moving_variance, %para178_0.0.branch1.1.2.branch2.2.bn.gamma, %para179_0.0.branch1.1.2.branch2.2.bn.beta, %para180_0.0.branch1.1.2.branch2.2.bn.moving_mean, %para181_0.0.branch1.1.2.branch2.2.bn.moving_variance, %para182_0.0.branch1.1.3.branch2.0.bn.gamma, %para183_0.0.branch1.1.3.branch2.0.bn.beta, %para184_0.0.branch1.1.3.branch2.0.bn.moving_mean, %para185_0.0.branch1.1.3.branch2.0.bn.moving_variance, %para186_0.0.branch1.1.3.branch2.1.bn.gamma, %para187_0.0.branch1.1.3.branch2.1.bn.beta, %para188_0.0.branch1.1.3.branch2.1.bn.moving_mean, %para189_0.0.branch1.1.3.branch2.1.bn.moving_variance, %para190_0.0.branch1.1.3.branch2.2.bn.gamma, %para191_0.0.branch1.1.3.branch2.2.bn.beta, %para192_0.0.branch1.1.3.branch2.2.bn.moving_mean, %para193_0.0.branch1.1.3.branch2.2.bn.moving_variance, %para194_0.0.branch1.1.4.branch2.0.bn.gamma, %para195_0.0.branch1.1.4.branch2.0.bn.beta, %para196_0.0.branch1.1.4.branch2.0.bn.moving_mean, %para197_0.0.branch1.1.4.branch2.0.bn.moving_variance, %para198_0.0.branch1.1.4.branch2.1.bn.gamma, %para199_0.0.branch1.1.4.branch2.1.bn.beta, %para200_0.0.branch1.1.4.branch2.1.bn.moving_mean, %para201_0.0.branch1.1.4.branch2.1.bn.moving_variance, %para202_0.0.branch1.1.4.branch2.2.bn.gamma, %para203_0.0.branch1.1.4.branch2.2.bn.beta, %para204_0.0.branch1.1.4.branch2.2.bn.moving_mean, %para205_0.0.branch1.1.4.branch2.2.bn.moving_variance, %para206_0.0.branch1.1.5.branch2.0.bn.gamma, %para207_0.0.branch1.1.5.branch2.0.bn.beta, %para208_0.0.branch1.1.5.branch2.0.bn.moving_mean, %para209_0.0.branch1.1.5.branch2.0.bn.moving_variance, %para210_0.0.branch1.1.5.branch2.1.bn.gamma, %para211_0.0.branch1.1.5.branch2.1.bn.beta, %para212_0.0.branch1.1.5.branch2.1.bn.moving_mean, %para213_0.0.branch1.1.5.branch2.1.bn.moving_variance, %para214_0.0.branch1.1.5.branch2.2.bn.gamma, %para215_0.0.branch1.1.5.branch2.2.bn.beta, %para216_0.0.branch1.1.5.branch2.2.bn.moving_mean, %para217_0.0.branch1.1.5.branch2.2.bn.moving_variance, %para218_0.0.branch1.1.6.branch2.0.bn.gamma, %para219_0.0.branch1.1.6.branch2.0.bn.beta, %para220_0.0.branch1.1.6.branch2.0.bn.moving_mean, %para221_0.0.branch1.1.6.branch2.0.bn.moving_variance, %para222_0.0.branch1.1.6.branch2.1.bn.gamma, %para223_0.0.branch1.1.6.branch2.1.bn.beta, %para224_0.0.branch1.1.6.branch2.1.bn.moving_mean, %para225_0.0.branch1.1.6.branch2.1.bn.moving_variance, %para226_0.0.branch1.1.6.branch2.2.bn.gamma, %para227_0.0.branch1.1.6.branch2.2.bn.beta, %para228_0.0.branch1.1.6.branch2.2.bn.moving_mean, %para229_0.0.branch1.1.6.branch2.2.bn.moving_variance, %para230_0.0.branch1.1.7.branch2.0.bn.gamma, %para231_0.0.branch1.1.7.branch2.0.bn.beta, %para232_0.0.branch1.1.7.branch2.0.bn.moving_mean, %para233_0.0.branch1.1.7.branch2.0.bn.moving_variance, %para234_0.0.branch1.1.7.branch2.1.bn.gamma, %para235_0.0.branch1.1.7.branch2.1.bn.beta, %para236_0.0.branch1.1.7.branch2.1.bn.moving_mean, %para237_0.0.branch1.1.7.branch2.1.bn.moving_variance, %para238_0.0.branch1.1.7.branch2.2.bn.gamma, %para239_0.0.branch1.1.7.branch2.2.bn.beta, %para240_0.0.branch1.1.7.branch2.2.bn.moving_mean, %para241_0.0.branch1.1.7.branch2.2.bn.moving_variance, %para242_0.0.branch1.2.0.branch1.0.bn.gamma, %para243_0.0.branch1.2.0.branch1.0.bn.beta, %para244_0.0.branch1.2.0.branch1.0.bn.moving_mean, %para245_0.0.branch1.2.0.branch1.0.bn.moving_variance, %para246_0.0.branch1.2.0.branch1.1.bn.gamma, %para247_0.0.branch1.2.0.branch1.1.bn.beta, %para248_0.0.branch1.2.0.branch1.1.bn.moving_mean, %para249_0.0.branch1.2.0.branch1.1.bn.moving_variance, %para250_0.0.branch1.2.0.branch2.0.bn.gamma, %para251_0.0.branch1.2.0.branch2.0.bn.beta, %para252_0.0.branch1.2.0.branch2.0.bn.moving_mean, %para253_0.0.branch1.2.0.branch2.0.bn.moving_variance, %para254_0.0.branch1.2.0.branch2.1.bn.gamma, %para255_0.0.branch1.2.0.branch2.1.bn.beta, %para256_0.0.branch1.2.0.branch2.1.bn.moving_mean, %para257_0.0.branch1.2.0.branch2.1.bn.moving_variance, %para258_0.0.branch1.2.0.branch2.2.bn.gamma, %para259_0.0.branch1.2.0.branch2.2.bn.beta, %para260_0.0.branch1.2.0.branch2.2.bn.moving_mean, %para261_0.0.branch1.2.0.branch2.2.bn.moving_variance, %para262_0.0.branch1.2.1.branch2.0.bn.gamma, %para263_0.0.branch1.2.1.branch2.0.bn.beta, %para264_0.0.branch1.2.1.branch2.0.bn.moving_mean, %para265_0.0.branch1.2.1.branch2.0.bn.moving_variance, %para266_0.0.branch1.2.1.branch2.1.bn.gamma, %para267_0.0.branch1.2.1.branch2.1.bn.beta, %para268_0.0.branch1.2.1.branch2.1.bn.moving_mean, %para269_0.0.branch1.2.1.branch2.1.bn.moving_variance, %para270_0.0.branch1.2.1.branch2.2.bn.gamma, %para271_0.0.branch1.2.1.branch2.2.bn.beta, %para272_0.0.branch1.2.1.branch2.2.bn.moving_mean, %para273_0.0.branch1.2.1.branch2.2.bn.moving_variance, %para274_0.0.branch1.2.2.branch2.0.bn.gamma, %para275_0.0.branch1.2.2.branch2.0.bn.beta, %para276_0.0.branch1.2.2.branch2.0.bn.moving_mean, %para277_0.0.branch1.2.2.branch2.0.bn.moving_variance, %para278_0.0.branch1.2.2.branch2.1.bn.gamma, %para279_0.0.branch1.2.2.branch2.1.bn.beta, %para280_0.0.branch1.2.2.branch2.1.bn.moving_mean, %para281_0.0.branch1.2.2.branch2.1.bn.moving_variance, %para282_0.0.branch1.2.2.branch2.2.bn.gamma, %para283_0.0.branch1.2.2.branch2.2.bn.beta, %para284_0.0.branch1.2.2.branch2.2.bn.moving_mean, %para285_0.0.branch1.2.2.branch2.2.bn.moving_variance, %para286_0.0.branch1.2.3.branch2.0.bn.gamma, %para287_0.0.branch1.2.3.branch2.0.bn.beta, %para288_0.0.branch1.2.3.branch2.0.bn.moving_mean, %para289_0.0.branch1.2.3.branch2.0.bn.moving_variance, %para290_0.0.branch1.2.3.branch2.1.bn.gamma, %para291_0.0.branch1.2.3.branch2.1.bn.beta, %para292_0.0.branch1.2.3.branch2.1.bn.moving_mean, %para293_0.0.branch1.2.3.branch2.1.bn.moving_variance, %para294_0.0.branch1.2.3.branch2.2.bn.gamma, %para295_0.0.branch1.2.3.branch2.2.bn.beta, %para296_0.0.branch1.2.3.branch2.2.bn.moving_mean, %para297_0.0.branch1.2.3.branch2.2.bn.moving_variance) {
+
+#------------------------> 0
+  %1(x) = call @models_pose_shufflenetv2_ConvModule_construct.3(%para1_x)
+      : (<Tensor[Float32], (3, 256, 256)>) -> (<null>)
+      #scope: (Default)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:371/        x = self.conv1(x)/
+  %2(x) = call @mindspore_nn_layer_pooling_MaxPool2d_construct.6(%1)
+      : (<null>) -> (<null>)
+      #scope: (Default)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:372/        x = self.maxpool(x)/
+  %3([CNode]8) = call @↵models_pose_shufflenetv2_ShuffleNetV2_construct.7(I64(0), %2)
+      : (<null>, <null>) -> (<null>)
+      #scope: (Default)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:374/        for i, layer in enumerate(self.layers):/
+  Return(%3)
+      : (<null>)
+      #scope: (Default)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:374/        for i, layer in enumerate(self.layers):/
+}
+# Order:
+#   1: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:x{[0]: ValueNode<FuncGraph> models_pose_shufflenetv2_ConvModule_construct.3, [1]: x}
+#   2: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:x{[0]: ValueNode<FuncGraph> mindspore_nn_layer_pooling_MaxPool2d_construct.6, [1]: x}
+#   3: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:[CNode]9{[0]: ValueNode<FuncGraph> enumerate_.10, [1]: [CNode]11}
+#   4: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:[CNode]12{[0]: ValueNode<FuncGraph> ms_len_with_iterable_check.13, [1]: [CNode]9}
+#   5: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:[CNode]8{[0]: ValueNode<FuncGraph> ↵models_pose_shufflenetv2_ShuffleNetV2_construct.7, [1]: ValueNode<Int64Imm> 0, [2]: x}
+#   6: @models_pose_shufflenetv2_ShuffleNetV2_construct.1:[CNode]14{[0]: ValueNode<Primitive> Return, [1]: [CNode]8}
+
+
+subgraph attr:
+training : 0
+subgraph instance: models_pose_shufflenetv2_ConvModule_construct.3 : 0xa493050
+# In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:33/    def construct(self, x):/
+subgraph @models_pose_shufflenetv2_ConvModule_construct.3 parent: [subgraph @models_pose_shufflenetv2_ShuffleNetV2_construct.1](%para298_x) {
+
+#------------------------> 1
+  %1(x) = call @mindspore_nn_layer_conv_Conv2d_construct.4(%para298_x)
+      : (<Tensor[Float32], (3, 256, 256)>) -> (<null>)
+      #scope: (Default/conv1-ConvModule)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:34/        x = self.conv(x)/
+  %2(x) = call @mindspore_nn_layer_normalization_BatchNorm2d_construct.15(%1)
+      : (<null>) -> (<null>)
+      #scope: (Default/conv1-ConvModule)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:35/        x = self.bn(x)/
+  %3(x) = call @mindspore_nn_layer_activation_ReLU_construct.16(%2)
+      : (<null>) -> (<null>)
+      #scope: (Default/conv1-ConvModule)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:36/        x = self.relu(x)/
+  Return(%3)
+      : (<null>)
+      #scope: (Default/conv1-ConvModule)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:37/        return x/
+}
+# Order:
+#   1: @models_pose_shufflenetv2_ConvModule_construct.3:x{[0]: ValueNode<FuncGraph> mindspore_nn_layer_conv_Conv2d_construct.4, [1]: x}
+#   2: @models_pose_shufflenetv2_ConvModule_construct.3:x{[0]: ValueNode<FuncGraph> mindspore_nn_layer_normalization_BatchNorm2d_construct.15, [1]: x}
+#   3: @models_pose_shufflenetv2_ConvModule_construct.3:x{[0]: ValueNode<FuncGraph> mindspore_nn_layer_activation_ReLU_construct.16, [1]: x}
+#   4: @models_pose_shufflenetv2_ConvModule_construct.3:[CNode]17{[0]: ValueNode<Primitive> Return, [1]: x}
+
+
+subgraph attr:
+training : 0
+subgraph instance: mindspore_nn_layer_conv_Conv2d_construct.4 : 0xa6184d0
+# In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:329/    def construct(self, x):/
+subgraph @mindspore_nn_layer_conv_Conv2d_construct.4 parent: [subgraph @models_pose_shufflenetv2_ShuffleNetV2_construct.1](%para299_x) {
+  %1([CNode]18) = Cond(Bool(0), Bool(0))
+      : (<Bool, NoShape>, <Bool, NoShape>) -> (<Bool, NoShape>)
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+  %2([CNode]19) = Switch(%1, call @✓mindspore_nn_layer_conv_Conv2d_construct.20, call @✗mindspore_nn_layer_conv_Conv2d_construct.5)
+      : (<Bool, NoShape>, <Func, NoShape>, <Func, NoShape>) -> (<Func, NoShape>)
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+
+#------------------------> 2
+  %3([CNode]21) = %2()
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+  %4([CNode]23) = call @↓mindspore_nn_layer_conv_Conv2d_construct.22(%3)
+      : (<null>) -> (<null>)
+      #scope: (Default/conv1-ConvModule)
+      # In file /home/neo/Documents/wkz/ADPD_ms_x2ms/tools/../lib/models/pose_shufflenetv2.py:34/        x = self.conv(x)/
+  Return(%4)
+      : (<null>)
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+}
+# Order:
+#   1: @mindspore_nn_layer_conv_Conv2d_construct.4:output{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Conv2D, [1]: x, [2]: conv1.conv.weight}
+#   2: @mindspore_nn_layer_conv_Conv2d_construct.4:[CNode]18{[0]: ValueNode<Primitive> Cond, [1]: ValueNode<BoolImm> false, [2]: ValueNode<BoolImm> false}
+#   3: @mindspore_nn_layer_conv_Conv2d_construct.4:[CNode]19{[0]: ValueNode<Primitive> Switch, [1]: [CNode]18, [2]: ValueNode<FuncGraph> ✓mindspore_nn_layer_conv_Conv2d_construct.20, [3]: ValueNode<FuncGraph> ✗mindspore_nn_layer_conv_Conv2d_construct.5}
+#   4: @mindspore_nn_layer_conv_Conv2d_construct.4:[CNode]21{[0]: [CNode]19}
+#   5: @mindspore_nn_layer_conv_Conv2d_construct.4:[CNode]23{[0]: ValueNode<FuncGraph> ↓mindspore_nn_layer_conv_Conv2d_construct.22, [1]: [CNode]21}
+#   6: @mindspore_nn_layer_conv_Conv2d_construct.4:[CNode]24{[0]: ValueNode<Primitive> Return, [1]: [CNode]23}
+
+
+subgraph attr:
+training : 0
+subgraph instance: ✗mindspore_nn_layer_conv_Conv2d_construct.5 : 0xa61b830
+# In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+subgraph @✗mindspore_nn_layer_conv_Conv2d_construct.5 parent: [subgraph @mindspore_nn_layer_conv_Conv2d_construct.4]() {
+
+#------------------------> 3
+  %1(output) = $(mindspore_nn_layer_conv_Conv2d_construct.4):S-Prim-Conv2D[kernel_size: (I64(3), I64(3)), stride: (I64(1), I64(1), I64(2), I64(2)), mode: I64(1), out_channel: I64(24), group: I64(1), input_names: ["x", "w"], pad: (I64(1), I64(1), I64(1), I64(1)), dilation: (I64(1), I64(1), I64(1), I64(1)), pad_mode: I64(0), output_names: ["output"], format: "NCHW", groups: I64(1)](%para299_x, %para3_conv1.conv.weight)
+      : (<Tensor[Float32], (3, 256, 256)>, <Ref[Tensor[Float32]], (24, 3, 3, 3)>) -> (<null>)
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:330/        output = self.conv2d(x, self.weight)/
+  Return(%1)
+      : (<null>)
+      #scope: (Default/conv1-ConvModule/conv-Conv2d)
+      # In file /home/neo/anaconda3/envs/ms/lib/python3.7/site-packages/mindspore/nn/layer/conv.py:331/        if self.has_bias:/
+}
+# Order:
+#   1: @✗mindspore_nn_layer_conv_Conv2d_construct.5:[CNode]25{[0]: ValueNode<Primitive> Return, [1]: output}
+
+
+#===============================================================================
+# num of function graphs in stack: 4/5 (Ignored 1 internal frames).

@@ -1,0 +1,116 @@
+2024-03-07 10:19:14,471 Namespace(cfg='/home/neo/Documents/wkz/ADPD_ms_x2ms/experiments/adpd_mpii/shuffnetv2/hg8_shuffnetv2_ADPD.yml', dataDir='', logDir='', modelDir='', opts=[], prevModelDir='')
+2024-03-07 10:19:14,471 AUTO_RESUME: True
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  CACHE_ROOT: data/cache
+  COLOR_RGB: False
+  DATASET: mpii
+  DATA_FORMAT: jpg
+  FLIP: True
+  HYBRID_JOINTS_TYPE: 
+  NUM_JOINTS_HALF_BODY: 8
+  PROB_HALF_BODY: -1.0
+  ROOT: ./
+  ROT_FACTOR: 30
+  SCALE_FACTOR: 0.25
+  SELECT_DATA: False
+  TEST_SET: valid
+  TRAIN_SET: train
+DATA_DIR: 
+DEBUG:
+  DEBUG: True
+  SAVE_BATCH_IMAGES_GT: True
+  SAVE_BATCH_IMAGES_PRED: True
+  SAVE_HEATMAPS_GT: True
+  SAVE_HEATMAPS_PRED: True
+GPUS: (0,)
+KD:
+  ALPHA: 0.5
+  LOSS_PARAM:
+    ALPHA: 1.0
+    BETA: 1.0
+    EPISILON: 1e-08
+    ITERS: 1
+    LOSS_WEIGHT: 1.0
+    TEMPERATURE: 1.0
+    THETA: 1.0
+    THRE: 0.5
+  LOSS_TYPE: ADPD
+  REGULAR: 1.0
+  TEACHER: models/pytorch/pose_mpii/bs4_hourglass_256_8_1_16_0.00025_0_140_90.520_model_best.pth
+  TRAIN_TYPE: ADPD
+LOG_ABLATION: shufflev2_ADPD_T1_W1
+LOG_DIR: log
+LOSS:
+  TOPK: 8
+  USE_DIFFERENT_JOINTS_WEIGHT: False
+  USE_OHKM: False
+  USE_TARGET_WEIGHT: True
+MODEL:
+  EXTRA:
+    DECONV_WITH_BIAS: False
+    FINAL_CONV_KERNEL: 1
+    GROUPS: 3
+    NUM_DECONV_FILTERS: [256, 256, 256]
+    NUM_DECONV_KERNELS: [4, 4, 4]
+    NUM_DECONV_LAYERS: 3
+  HEATMAP_SIZE: [64, 64]
+  IMAGE_SIZE: [256, 256]
+  INIT_WEIGHTS: True
+  NAME: pose_shufflenetv2
+  NUM_JOINTS: 16
+  PRETRAINED: output/mpii/shuffleNetv2/shufflenetv2_256x256/model_best.pth
+  SIGMA: 2
+  TAG_PER_JOINT: True
+  TARGET_TYPE: gaussian
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 40
+RANK: 0
+SEED: 1213
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+  BBOX_THRE: 1.0
+  COCO_BBOX_FILE: 
+  FLIP_TEST: True
+  IMAGE_THRE: 0.1
+  IN_VIS_THRE: 0.0
+  MODEL_FILE: model_best.pth
+  NMS_THRE: 0.6
+  OKS_THRE: 0.5
+  POST_PROCESS: True
+  SHIFT_HEATMAP: True
+  SOFT_NMS: False
+  USE_GT_BBOX: False
+TRAIN:
+  BATCH_SIZE_PER_GPU: 96
+  BEGIN_EPOCH: 0
+  CHECKPOINT: output/mpii/shuffleNetv2/shufflenetv2_256x256/model_best.pth
+  END_EPOCH: 210
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  LR: 0.001
+  LR_FACTOR: 0.1
+  LR_OTHER: 0.1
+  LR_STEP: [170, 200]
+  MOMENTUM: 0.9
+  NESTEROV: False
+  OPTIMIZER: adam
+  RESUME: False
+  SHUFFLE: True
+  WD: 0.0001
+WEIGHT:
+  NAME: pose_hrnet
+  NUM_JOINTS: 14
+WORKERS: 4
+2024-03-07 10:19:14,836 => loading model from model_best.pth
+2024-03-07 10:19:15,035 => load 2958 samples
+2024-03-07 10:19:17,951 Test: [0/93]	Time 2.903 (2.903)	Loss 0.0004 (0.0004)	Accuracy 0.929 (0.929)
+2024-03-07 10:20:31,125 Test: [40/93]	Time 1.784 (1.856)	Loss 0.0005 (0.0005)	Accuracy 0.852 (0.879)
+2024-03-07 10:21:44,597 Test: [80/93]	Time 1.695 (1.846)	Loss 0.0004 (0.0005)	Accuracy 0.916 (0.877)
+2024-03-07 10:22:04,114 | Arch | Head | Shoulder | Elbow | Wrist | Hip | Knee | Ankle | Mean | Mean@0.1 |
+2024-03-07 10:22:04,114 |---|---|---|---|---|---|---|---|---|---|
+2024-03-07 10:22:04,114 | pose_shu... & 96.180 & 93.580 & 86.126 & 79.269 & 86.862 & 80.858 & 76.169 & 86.198 & 29.011 &
