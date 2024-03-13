@@ -41,7 +41,7 @@ def parse_args():
     parser.add_argument('--cfg',
                         help='experiment configure file name',
                         type=str,
-                        default='/home/neo/Documents/wkz/ADPD_ms_x2ms/experiments/adpd_mpii/shuffnetv2/hg8_shuffnetv2_ADPD.yml')
+                        default='./experiments/adpd_mpii/shuffnetv2/hg8_shuffnetv2_ADPD.yml')
 
     parser.add_argument('opts',
                         help="Modify config options using the command-line",
