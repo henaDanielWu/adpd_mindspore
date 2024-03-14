@@ -25,11 +25,22 @@ cd lib
 make
 ```
 
-## Training and Testing
+## Testing
 
 * Test:
 
 Run the following command：
 ```shell
 python tools/test.py
+```
+## Reference
+If you use ADPD in your research, please cite our work by using the following BibTeX entry:
+```shell
+@inproceedings{xu2023adaptive,
+  title={Adaptive Decoupled Pose Knowledge Distillation},
+  author={Xu, Jie and Zhang, Shanshan and Yang, Jian},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={4401--4409},
+  year={2023}
+}
 ```
