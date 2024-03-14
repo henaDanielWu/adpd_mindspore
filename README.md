@@ -27,8 +27,6 @@ make
 
 ## Testing
 
-* Test:
-
 Run the following command：
 ```shell
 python tools/test.py
